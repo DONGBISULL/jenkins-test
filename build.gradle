@@ -30,6 +30,8 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-bootWar {
-    archiveFileName = 'jenkins-test.war'
+war {
+    archiveFileName = 'ROOT.war'
+    archiveVersion.set('')    // 버전 정보를 비워서 'ROOT.war'로 만들기
+    archiveClassifier.set('') // 분류자도 빈 문자열로 설정
 }
